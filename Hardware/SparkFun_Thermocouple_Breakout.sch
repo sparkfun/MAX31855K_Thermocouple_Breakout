@@ -18121,6 +18121,7 @@ circuit boards.  (OMEGA PCC-SMP)&lt;br /&gt;
 </libraries>
 <attributes>
 <attribute name="DESIGNER" value="Brent Wilkins"/>
+<attribute name="VERSION" value="v01"/>
 </attributes>
 <variantdefs>
 </variantdefs>
@@ -18158,11 +18159,13 @@ circuit boards.  (OMEGA PCC-SMP)&lt;br /&gt;
 </part>
 <part name="C2" library="SparkFun-Capacitors" deviceset="10NF/10000PF-50V-10%(0603)" device="" value="10nF"/>
 <part name="JP2" library="Testing" deviceset="PCB_THERMOCOUPLE" device=""/>
+<part name="LOGO3" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME_FLAME" device=".1_INCH"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="165.862" y="11.176" size="2.54" layer="94">&gt;DESIGNER</text>
+<text x="165.862" y="11.176" size="2.54" layer="94" font="vector">&gt;DESIGNER</text>
+<text x="236.22" y="7.62" size="2.54" layer="94" font="vector">&gt;VERSION</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -18203,6 +18206,7 @@ circuit boards.  (OMEGA PCC-SMP)&lt;br /&gt;
 <attribute name="VALUE" x="86.36" y="50.8" size="1.778" layer="96"/>
 <attribute name="NAME" x="91.44" y="56.642" size="1.778" layer="95"/>
 </instance>
+<instance part="LOGO3" gate="G$1" x="190.5" y="35.56"/>
 </instances>
 <busses>
 </busses>
