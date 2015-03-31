@@ -18142,7 +18142,9 @@ circuit boards.  (OMEGA PCC-SMP)&lt;br /&gt;
 <part name="FID1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 <part name="FID2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="0.1UF-25V(+80/-20%)(0603)" device="" value="0.1uF"/>
-<part name="U1" library="SparkFun-AnalogIC" deviceset="MAX31855K" device=""/>
+<part name="U1" library="SparkFun-AnalogIC" deviceset="MAX31855K" device="">
+<attribute name="PROD_ID" value="IC-12578"/>
+</part>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M06" device="SILK_FEMALE_PTH" value="DNP"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -18160,6 +18162,7 @@ circuit boards.  (OMEGA PCC-SMP)&lt;br /&gt;
 <part name="C2" library="SparkFun-Capacitors" deviceset="10NF/10000PF-50V-10%(0603)" device="" value="10nF"/>
 <part name="JP2" library="Testing" deviceset="PCB_THERMOCOUPLE" device=""/>
 <part name="LOGO3" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME_FLAME" device=".1_INCH"/>
+<part name="LOGO4" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
 </parts>
 <sheets>
 <sheet>
@@ -18182,7 +18185,9 @@ circuit boards.  (OMEGA PCC-SMP)&lt;br /&gt;
 <instance part="FID1" gate="G$1" x="241.3" y="30.48"/>
 <instance part="FID2" gate="G$1" x="241.3" y="25.4"/>
 <instance part="C1" gate="G$1" x="73.66" y="93.98" rot="MR0"/>
-<instance part="U1" gate="G$1" x="116.84" y="99.06"/>
+<instance part="U1" gate="G$1" x="116.84" y="99.06">
+<attribute name="PROD_ID" x="116.84" y="99.06" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="GND2" gate="1" x="73.66" y="86.36"/>
 <instance part="JP1" gate="G$1" x="162.56" y="96.52" rot="R180"/>
 <instance part="GND1" gate="1" x="172.72" y="104.14"/>
@@ -18207,6 +18212,7 @@ circuit boards.  (OMEGA PCC-SMP)&lt;br /&gt;
 <attribute name="NAME" x="91.44" y="56.642" size="1.778" layer="95"/>
 </instance>
 <instance part="LOGO3" gate="G$1" x="190.5" y="35.56"/>
+<instance part="LOGO4" gate="G$1" x="127" y="27.94"/>
 </instances>
 <busses>
 </busses>
