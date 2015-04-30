@@ -17,37 +17,48 @@
  *                                                                            *
  *                                                                            *
  *****************************************************************************/
-#ifndef _MAX31855K_h_
-#define _MAX31855K_h_
+#ifndef _SPARKFUN_MAX31855K_h_
+#define _SPARKFUN_MAX31855K_h_
 
 #include <SPI.h> // Have to include this in the main sketch too... (Using SPI)
 
-class max31855k
+// Note: Need to define these somewhere. Doing so at the top of the main sketch.
+//const uint8_t CHIP_SELECT_PIN = 10;
+//const uint8_t VCC = 14;
+//const uint8_t GND = 15;
+
+class SparkFunMAX31855k
 {
 public:
   // Simple Arduino API style guide functions
-  inline float readTempC() { return readTemp(max31855k::C); } 
-  inline float readTempF() { return readTemp(max31855k::F); }
-  inline float readTempR() { return readTemp(max31855k::R); }
-  inline float readTempK() { return readTemp(max31855k::K); }
+  inline float readTempC() { return readTemp(SparkFunMAX31855k::C); } 
+  inline float readTempF() { return readTemp(SparkFunMAX31855k::F); }
+  inline float readTempR() { return readTemp(SparkFunMAX31855k::R); }
+  inline float readTempK() { return readTemp(SparkFunMAX31855k::K); }
+
+void readBytes(void);
 
   // More advanced code concepts used below
   enum units {
     F, C, K, R
   };
   // Returns the temperature in degrees F, K, R, or C (default if unspecified)
-  float readTemp(max31855k::units _u=C);
+  float readTemp(SparkFunMAX31855k::units _u=C);
   // Returns the cold junction temperature in ˚C
   float readCJT(void);
 
-  max31855k(uint8_t);
-  ~max31855k() {} // User is responsible for reassigning pins and stopping SPI
+  SparkFunMAX31855k(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t);
+  ~SparkFunMAX31855k() {} // User is responsible for reassigning pins and stopping SPI
 protected:
+  union {
+    uint8_t bytes[4];
+    uint32_t int32;
+  } data;
   uint8_t cs;
-  uint8_t bits31_24;
-  uint8_t bits23_16;
-  uint8_t bits15_8;
-  uint8_t bits7_0;
+//  uint8_t bits31_24;
+//  uint8_t bits23_16;
+//  uint8_t bits15_8;
+//  uint8_t bits7_0;
 
   typedef enum {  // HotJunction_ColdJunction_Fault
     HOT_HOT_NONE,
@@ -89,7 +100,6 @@ protected:
   } fake_condition_t;
 
 
-  void readBytes(void);
   void readBytes(fake_condition_t);
   void select(void);
   void deselect(void);

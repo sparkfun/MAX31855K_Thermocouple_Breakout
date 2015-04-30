@@ -91,6 +91,7 @@
 <layer number="112" name="tSilk" color="7" fill="1" visible="no" active="yes"/>
 <layer number="113" name="IDFDebug" color="4" fill="1" visible="no" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="no" active="yes"/>
+<layer number="118" name="Rect_Pads" color="7" fill="1" visible="no" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="no" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="no" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="no" active="yes"/>
@@ -203,6 +204,7 @@ BREAKOUT</text>
 <dimension x1="0" y1="0" x2="29.972" y2="0" x3="14.986" y3="-2.54" textsize="1.016" textratio="15" layer="47" unit="inch"/>
 <dimension x1="0" y1="19.812" x2="6.858" y2="19.812" x3="3.429" y3="22.225" textsize="1.016" textratio="15" layer="47" unit="inch"/>
 <dimension x1="32.766" y1="2.794" x2="29.972" y2="2.794" x3="31.369" y3="-2.54" textsize="1.016" textratio="15" layer="47" unit="inch"/>
+<text x="29.464" y="9.906" size="1.27" layer="16" font="vector" ratio="15" rot="SMR270" align="bottom-center">&gt;VERSION</text>
 </plain>
 <libraries>
 <library name="SparkFun-Aesthetics">
@@ -1508,6 +1510,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+<circle x="0" y="0" radius="0.127" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="0.0254" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="0.218496875" width="0.127" layer="21"/>
 </package>
 <package name="TP_15TH">
 <pad name="P$1" x="0" y="0" drill="0.381" diameter="0.6096" stop="no"/>
@@ -1546,7 +1551,7 @@ circuit boards.</description>
 </libraries>
 <attributes>
 <attribute name="DESIGNER" value="Brent Wilkins"/>
-<attribute name="VERSION" value="v01"/>
+<attribute name="VERSION" value="v10"/>
 </attributes>
 <variantdefs>
 </variantdefs>
@@ -1728,7 +1733,7 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="FRAME1" library="SparkFun-Aesthetics" package="CREATIVE_COMMONS" value="&gt;VERSION" x="-8.5598" y="-12.6746" smashed="yes">
-<attribute name="VERSION" value="v01" x="29.4894" y="9.906" size="1.27" layer="16" font="vector" ratio="15" rot="SMR270" align="bottom-center"/>
+<attribute name="VERSION" value="v01" x="29.4894" y="9.906" size="1.27" layer="16" font="vector" ratio="15" rot="SMR270" align="bottom-center" display="off"/>
 <attribute name="DESIGNER" value="Brent Wilkins" x="21.4122" y="-12.6746" size="1.778" layer="51" font="vector"/>
 </element>
 <element name="STANDOFF4" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="6.858" y="19.812"/>
