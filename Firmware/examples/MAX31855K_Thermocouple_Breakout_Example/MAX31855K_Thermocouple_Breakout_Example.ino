@@ -36,7 +36,7 @@ const uint8_t VCC = 14; // Powering board straight from Arduino Pro Mini
 const uint8_t GND = 15;
 
 // Instantiate an instance of the SparkFunMAX31855k class
-SparkFunMAX31855k probe(CHIP_SELECT_PIN, SCK, MISO, VCC, GND);
+SparkFunMAX31855k probe(CHIP_SELECT_PIN, VCC, GND);
 
 void setup() {
   Serial.begin(9600);

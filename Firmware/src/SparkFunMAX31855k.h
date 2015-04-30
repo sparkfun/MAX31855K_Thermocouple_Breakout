@@ -31,10 +31,12 @@ class SparkFunMAX31855k
 {
 public:
   // Simple Arduino API style guide functions
+/*
   inline float readTempC() { return readTemp(SparkFunMAX31855k::C); } 
   inline float readTempF() { return readTemp(SparkFunMAX31855k::F); }
   inline float readTempR() { return readTemp(SparkFunMAX31855k::R); }
   inline float readTempK() { return readTemp(SparkFunMAX31855k::K); }
+*/
 
 void readBytes(void);
 
@@ -47,7 +49,7 @@ void readBytes(void);
   // Returns the cold junction temperature in ˚C
   float readCJT(void);
 
-  SparkFunMAX31855k(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t);
+  SparkFunMAX31855k(const uint8_t, const uint8_t, const uint8_t);
   ~SparkFunMAX31855k() {} // User is responsible for reassigning pins and stopping SPI
 protected:
   union {
