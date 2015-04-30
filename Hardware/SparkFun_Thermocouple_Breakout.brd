@@ -152,32 +152,32 @@
 </layers>
 <board>
 <plain>
-<wire x1="29.972" y1="1.778" x2="29.972" y2="18.288" width="0.254" layer="20"/>
-<wire x1="29.972" y1="18.288" x2="28.448" y2="19.812" width="0.254" layer="20" curve="90"/>
-<wire x1="28.448" y1="19.812" x2="26.162" y2="19.812" width="0.254" layer="20"/>
-<wire x1="22.352" y1="19.812" x2="1.27" y2="19.812" width="0.254" layer="20"/>
-<wire x1="1.27" y1="19.812" x2="0" y2="18.542" width="0.254" layer="20" curve="90"/>
-<wire x1="0" y1="18.542" x2="0" y2="1.27" width="0.254" layer="20"/>
+<wire x1="29.972" y1="1.778" x2="29.972" y2="18.288" width="0.2032" layer="20"/>
+<wire x1="29.972" y1="18.288" x2="28.448" y2="19.812" width="0.2032" layer="20" curve="90"/>
+<wire x1="28.448" y1="19.812" x2="26.162" y2="19.812" width="0.2032" layer="20"/>
+<wire x1="22.352" y1="19.812" x2="1.27" y2="19.812" width="0.2032" layer="20"/>
+<wire x1="1.27" y1="19.812" x2="0" y2="18.542" width="0.2032" layer="20" curve="90"/>
+<wire x1="0" y1="18.542" x2="0" y2="1.27" width="0.2032" layer="20"/>
 <text x="2.794" y="13.716" size="1.016" layer="21" font="vector" ratio="15" align="center-left">VCC</text>
 <text x="2.794" y="3.556" size="1.016" layer="21" font="vector" ratio="15" align="center-left">!CS</text>
 <text x="2.794" y="6.096" size="1.016" layer="21" font="vector" ratio="15" align="center-left">(MI)SO</text>
 <text x="2.794" y="8.636" size="1.016" layer="21" font="vector" ratio="15" align="center-left">NC</text>
 <text x="2.794" y="11.176" size="1.016" layer="21" font="vector" ratio="15" align="center-left">SCK</text>
 <text x="2.794" y="16.256" size="1.016" layer="21" font="vector" ratio="15" align="center-left">GND</text>
-<wire x1="26.162" y1="19.812" x2="25.908" y2="19.558" width="0.254" layer="20"/>
-<wire x1="25.908" y1="19.558" x2="25.908" y2="18.542" width="0.254" layer="20"/>
-<wire x1="25.908" y1="18.542" x2="22.606" y2="18.542" width="0.254" layer="20"/>
-<wire x1="22.606" y1="18.542" x2="22.606" y2="19.558" width="0.254" layer="20"/>
-<wire x1="22.606" y1="19.558" x2="22.352" y2="19.812" width="0.254" layer="20"/>
-<wire x1="22.352" y1="0" x2="22.606" y2="0.254" width="0.254" layer="20"/>
-<wire x1="22.606" y1="0.254" x2="22.606" y2="1.27" width="0.254" layer="20"/>
-<wire x1="22.606" y1="1.27" x2="25.908" y2="1.27" width="0.254" layer="20"/>
-<wire x1="25.908" y1="1.27" x2="25.908" y2="0.254" width="0.254" layer="20"/>
-<wire x1="25.908" y1="0.254" x2="26.162" y2="0" width="0.254" layer="20"/>
-<wire x1="0" y1="1.27" x2="1.27" y2="0" width="0.254" layer="20" curve="90"/>
-<wire x1="1.27" y1="0" x2="22.352" y2="0" width="0.254" layer="20"/>
-<wire x1="26.162" y1="0" x2="28.194" y2="0" width="0.254" layer="20"/>
-<wire x1="28.194" y1="0" x2="29.972" y2="1.778" width="0.254" layer="20" curve="90"/>
+<wire x1="26.162" y1="19.812" x2="25.908" y2="19.558" width="0.2032" layer="20"/>
+<wire x1="25.908" y1="19.558" x2="25.908" y2="18.542" width="0.2032" layer="20"/>
+<wire x1="25.908" y1="18.542" x2="22.606" y2="18.542" width="0.2032" layer="20"/>
+<wire x1="22.606" y1="18.542" x2="22.606" y2="19.558" width="0.2032" layer="20"/>
+<wire x1="22.606" y1="19.558" x2="22.352" y2="19.812" width="0.2032" layer="20"/>
+<wire x1="22.352" y1="0" x2="22.606" y2="0.254" width="0.2032" layer="20"/>
+<wire x1="22.606" y1="0.254" x2="22.606" y2="1.27" width="0.2032" layer="20"/>
+<wire x1="22.606" y1="1.27" x2="25.908" y2="1.27" width="0.2032" layer="20"/>
+<wire x1="25.908" y1="1.27" x2="25.908" y2="0.254" width="0.2032" layer="20"/>
+<wire x1="25.908" y1="0.254" x2="26.162" y2="0" width="0.2032" layer="20"/>
+<wire x1="0" y1="1.27" x2="1.27" y2="0" width="0.2032" layer="20" curve="90"/>
+<wire x1="1.27" y1="0" x2="22.352" y2="0" width="0.2032" layer="20"/>
+<wire x1="26.162" y1="0" x2="28.194" y2="0" width="0.2032" layer="20"/>
+<wire x1="28.194" y1="0" x2="29.972" y2="1.778" width="0.2032" layer="20" curve="90"/>
 <rectangle x1="12.7" y1="8.382" x2="13.208" y2="8.89" layer="41"/>
 <text x="2.794" y="3.556" size="1.016" layer="22" font="vector" ratio="15" rot="MR0" align="center-right">!CS</text>
 <text x="2.794" y="6.096" size="1.016" layer="22" font="vector" ratio="15" rot="MR0" align="center-right">(MI)SO</text>
