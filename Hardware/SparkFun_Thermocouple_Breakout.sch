@@ -18476,10 +18476,8 @@ circuit boards.  (OMEGA PCC-SMP)&lt;br /&gt;
 <net name="N$2" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="(MI)SO"/>
-<wire x1="129.54" y1="93.98" x2="154.94" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="G$1" pin="5"/>
-<wire x1="157.48" y1="91.44" x2="154.94" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="91.44" x2="154.94" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="93.98" x2="157.48" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="G$1" pin="4"/>
 </segment>
 </net>
 <net name="N$8" class="0">

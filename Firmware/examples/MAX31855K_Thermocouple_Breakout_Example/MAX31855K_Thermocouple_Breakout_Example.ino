@@ -27,7 +27,8 @@
  ******************************************************************************/
 
 #include <SparkFunMAX31855k.h> // Using the max31855k driver
-#include <SPI.h>       // Included here too due Arduino IDE; Used in max31855k.h
+#include <SPI.h>  // Included here too due Arduino IDE; Used in max31855k.h
+#include <math.h> // For isnan()
 
 // Define SPI Arduino pin numbers for the Arduino Pro Mini
 const uint8_t CHIP_SELECT_PIN = 10; // Using standard CS line (SS)
@@ -39,26 +40,36 @@ const uint8_t GND = 15;
 SparkFunMAX31855k probe(CHIP_SELECT_PIN, VCC, GND);
 
 void setup() {
+/*
+  pinMode(GND, OUTPUT);
+  digitalWrite(GND, LOW);
+  pinMode(VCC, OUTPUT);
+  digitalWrite(VCC, HIGH);
+*/
   Serial.begin(9600);
   Serial.println("\nBeginning...");
 }
 
 void loop() {
-  probe.readBytes();
-/*
-  Serial.print("CJT is (˚C): ");
-  Serial.println(probe.readCJT());
+  float temperature = probe.readCJT();
+  if (!isnan(temperature)) {
+    Serial.print("CJT is (˚C): ");
+    Serial.println(temperature);
+  }
   
   // Read the temperature in Celsius
-  float temperature = probe.readTempC();
-  Serial.print("Temp[C]=");
-  Serial.print(temperature);
+  temperature = probe.readTempC();
+  if (!isnan(temperature)) {
+    Serial.print("Temp[C]=");
+    Serial.print(temperature);
+  }
 
   // Read the temperature in Fahrenheit
   temperature = probe.readTempF();
-  Serial.print("\tTemp[F]=");
-  Serial.println(temperature);
-*/
+  if (!isnan(temperature)) {
+    Serial.print("\tTemp[F]=");
+    Serial.println(temperature);
+  }
 
   delay(750);
 }

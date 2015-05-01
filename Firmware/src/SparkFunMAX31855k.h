@@ -31,14 +31,10 @@ class SparkFunMAX31855k
 {
 public:
   // Simple Arduino API style guide functions
-/*
   inline float readTempC() { return readTemp(SparkFunMAX31855k::C); } 
   inline float readTempF() { return readTemp(SparkFunMAX31855k::F); }
   inline float readTempR() { return readTemp(SparkFunMAX31855k::R); }
   inline float readTempK() { return readTemp(SparkFunMAX31855k::K); }
-*/
-
-void readBytes(void);
 
   // More advanced code concepts used below
   enum units {
@@ -50,59 +46,16 @@ void readBytes(void);
   float readCJT(void);
 
   SparkFunMAX31855k(const uint8_t, const uint8_t, const uint8_t);
-  ~SparkFunMAX31855k() {} // User is responsible for reassigning pins and stopping SPI
+  ~SparkFunMAX31855k() {} // User responsible 4 reassigning pins & stopping SPI
 protected:
   union {
     uint8_t bytes[4];
-    uint32_t int32;
+    uint32_t uint32;
   } data;
   uint8_t cs;
-//  uint8_t bits31_24;
-//  uint8_t bits23_16;
-//  uint8_t bits15_8;
-//  uint8_t bits7_0;
 
-  typedef enum {  // HotJunction_ColdJunction_Fault
-    HOT_HOT_NONE,
-    HOT_HOT_SCV,
-    HOT_HOT_SCG,
-    HOT_HOT_OC,
-    HOT_ZERO_NONE,
-    HOT_ZERO_SCV,
-    HOT_ZERO_SCG,
-    HOT_ZERO_OC,
-    HOT_NEG_NONE,
-    HOT_NEG_SCV,
-    HOT_NEG_SCG,
-    HOT_NEG_OC,
-    ZERO_HOT_NONE,
-    ZERO_HOT_SCV,
-    ZERO_HOT_SCG,
-    ZERO_HOT_OC,
-    ZERO_ZERO_NONE,
-    ZERO_ZERO_SCV,
-    ZERO_ZERO_SCG,
-    ZERO_ZERO_OC,
-    ZERO_NEG_NONE,
-    ZERO_NEG_SCV,
-    ZERO_NEG_SCG,
-    ZERO_NEG_OC,
-    NEG_HOT_NONE,
-    NEG_HOT_SCV,
-    NEG_HOT_SCG,
-    NEG_HOT_OC,
-    NEG_ZERO_NONE,
-    NEG_ZERO_SCV,
-    NEG_ZERO_SCG,
-    NEG_ZERO_OC,
-    NEG_NEG_NONE,
-    NEG_NEG_SCV,
-    NEG_NEG_SCG,
-    NEG_NEG_OC,
-  } fake_condition_t;
-
-
-  void readBytes(fake_condition_t);
+  void readBytes(void);
+  uint8_t checkHasFault(void);
   void select(void);
   void deselect(void);
 };
