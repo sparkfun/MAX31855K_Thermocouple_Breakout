@@ -1,7 +1,7 @@
 /***************** MAX31855K_Thermocouple_Breakout_Example.ino *****************
  *                                                                             *
  * MAX31855K Thermocouple Breakout Example Code                                *
- * brent.wilkins@sparkfun.com                                                  *
+ * brent@sparkfun.com                                                          *
  * March 26th 2015                                                             *
  * https://github.com/sparkfun/MAX31855K_Thermocouple_Breakout                 *
  *                                                                             *
@@ -9,11 +9,11 @@
  *                                                                             *
  * Circuit:                                                                    *
  * MAX31855K breakout attached to the following pins                           *
- *  VCC:  pin 14                                                               *
  *  SS:   pin 10                                                               *
- *  MOSI: pin 12 (NC)                                                          *
- *  MISO: pin 11                                                               *
+ *  MOSI: pin 11 (NC)                                                          *
+ *  MISO: pin 12                                                               *
  *  SCK:  pin 13                                                               *
+ *  VCC:  pin 14                                                               *
  *  GND:  pin 15                                                               *
  *                                                                             *
  *                                                                             *
@@ -27,10 +27,9 @@
  ******************************************************************************/
 
 #include <SparkFunMAX31855k.h> // Using the max31855k driver
-#include <SPI.h>  // Included here too due Arduino IDE; Used in max31855k.h
-#include <math.h> // For isnan()
+#include <SPI.h>  // Included here too due Arduino IDE; Used in above header
 
-// Define SPI Arduino pin numbers for the Arduino Pro Mini
+// Define SPI Arduino pin numbers (Arduino Pro Mini)
 const uint8_t CHIP_SELECT_PIN = 10; // Using standard CS line (SS)
 // SCK & MISO are defined by Arduiino
 const uint8_t VCC = 14; // Powering board straight from Arduino Pro Mini
@@ -40,14 +39,9 @@ const uint8_t GND = 15;
 SparkFunMAX31855k probe(CHIP_SELECT_PIN, VCC, GND);
 
 void setup() {
-/*
-  pinMode(GND, OUTPUT);
-  digitalWrite(GND, LOW);
-  pinMode(VCC, OUTPUT);
-  digitalWrite(VCC, HIGH);
-*/
   Serial.begin(9600);
   Serial.println("\nBeginning...");
+  delay(50);  // Let IC 'boot' or first readings will be garbage
 }
 
 void loop() {
