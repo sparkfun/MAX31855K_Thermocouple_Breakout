@@ -1,12 +1,13 @@
 MAX31855K Thermocouple Breakout
 ========================================
 
-[![MAX31855K Thermocouple Breakout](URL for picture of part)
-*Part Name (SKU)*](URL for product on Sparkfun.com)
+[![MAX31855K Thermocouple Breakout](http://www.picgifs.com/graphics/c/cute/graphics-cute-160852.jpg)
 
-Breakout board for our thermocouple and a MAX6675 [The datasheet can be found here.](http://datasheets.maximintegrated.com/en/ds/MAX31855.pdf)
+[*SEN-13266*](https://www.sparkfun.com/products/13266)
 
-More information can be found on the Wiki for this repo. 
+The MAX31855K IC takes a standard k-type thermocouple in one end, digitizes the temperature measured and sends that data out the other end via [SPI](http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus).  [The datasheet for the MAX31855K can be found here.](http://datasheets.maximintegrated.com/en/ds/MAX31855.pdf)
+
+More information can be found on the Wiki for this repo.
 
 This part was created in Eagle v7.2.0.
 
@@ -28,7 +29,7 @@ Product Versions
 
 Version History
 ---------------
-* [vExxFxxZxxHxxLxxSxx](URL for tag specific to this version) description 
+* [vExxFxxZxxHxxLxxSxx](URL for tag specific to this version) description
 * [vEyyFyyZyyHyyLyySyy](URL for tag specific to this version) description
 
 License Information
