@@ -13,7 +13,6 @@ This part was created in Eagle v7.2.0.
 Repository Contents
 -------------------
 
-* **/Fritzing** - Fritzing Example wiring images
 * **/Hardware** - All Eagle design files (.brd, .sch)
 * **/Libraries** - All Arduino libraries and board examples
 * **/Production** - Test bed files and production panel files
